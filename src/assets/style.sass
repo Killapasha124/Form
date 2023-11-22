@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap')
+
+.container
+	max-width: 600px
+	margin: 0 auto
+	font-family: Arial, sans-serif
+.text
+	text-align: center
+
+.sex
+	display: flex
+	flex-direction: row
+	align-items: flex-start
+	align-items: center
+.sex__options
+	display: flex
+	flex-direction: column
+.sex__option
+	display: flex
+	align-items: center
+	margin-bottom: 5px
+	input[type="radio"]
+		margin-right: 5px
+
+.client-group
+	font-family: Arial, sans-serif
+	margin-bottom: 20px
+.client-group__title
+	font-weight: bold
+	margin-bottom: 5px
+.multi-selector
+	border: 1px solid #cccccc
+	border-radius: 4px
+	padding: 10px
+.selected-items
+	display: flex
+	flex-wrap: wrap
+	gap: 5px
+	margin-bottom: 10px
+.selected-item
+	background-color: #c8ffde
+	padding: 5px
+	border-radius: 4px
+	button
+		margin-left: 5px
+		background-color: #ff2525
+		color: white
+		border: none
+		padding: 5px
+		border-radius: 3px
+		cursor: pointer
+		opacity: 75%
+		&:hover
+			background-color: #cc0000
+			opacity: 100%
+.selection
+	select
+		padding: 5px
+		font-size: 16px
+		border-radius: 4px
+		width: 100%
+		box-sizing: border-box
+
+form
+	margin-top: 20px
+div
+	margin-bottom: 15px
+label
+	display: block
+
+	font-weight: bold
+	margin-bottom: 5px
+	& > span
+		color: red
+		margin-left: 3px
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+select
+	width: 100%
+	padding: 8px
+	border-radius: 5px
+	border: 1px solid #ccc
+	transition: border-color 0.3s ease
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus,
+select:focus
+	outline: none
+	border-color: #66afe9
+input[type="radio"],
+input[type="checkbox"]
+	margin-right: 6px
+	cursor: pointer
+button
+	padding: 10px 20px
+	background-color: #4caf50
+	color: white
+	border: none
+	border-radius: 5px
+	cursor: pointer
+	font-size: 16px
+	transition: all .3s ease
+
+	&:hover
+		background-color: #45a049
+
+h2
+	margin-top: 20px
+	border-bottom: 1px solid #ccc
+	padding-bottom: 5px
+input[type="date"]::-webkit-calendar-picker-indicator
+	background-color: #1566bd
+	color: white
+	padding: 0.3em
+	border: none
+	border-radius: 4px
+	cursor: pointer
+	&:hover
+		background-color: #0056b3
+		& + .datepicker
+			background-color: #f0f0f0
+
+.input-data
+	border: 1px solid #ccc
+	padding: 5px
+	transition: border-color 0.3s ease
+	&.invalid
+		border-color: red
+	&.valid
+		border-color: green
+
+.error-message
+	color: red
+	font-size: 12px
+
+.required-indicator::before
+	content: "*"
+	color: red
+	transition: color 0.3s ease
+
+.valid-indicator::before
+	content: "\2713"
+	color: green
+	opacity: 0
+	transform: scale(0)
+	animation: zoomIn 0.3s forwards
+
+@keyframes zoomIn
+	to
+		opacity: 1
+		transform: scale(1)
+
+.modal
+	position: fixed
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	padding: 20px
+	background-color: white
+	border: 1px solid #ccc
+	border-radius: 5px
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+	display: flex
+	flex-direction: column
+	align-items: center
+
+.modal-close
+	position: absolute
+	top: 5px
+	right: 5px
+	cursor: pointer
+
+.modal-icon
+	font-size: 40px
+	margin-bottom: 20px
+
+.success
+	border-color: green
+
+.error
+	border-color: red
+
+/* Стили для галочки и крестика
+
+.modal-icon
+	&::before, &::after
+		content: ''
+
+	
+	&::after
+		position: absolute
+
+.success .modal-icon
+	&::before
+		ackground: green
+
+	&::after
+		content: '\\2714'
+		color: white
+		font-size: 20px
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+
+
+
+	&::after
+		content: '\\2716'
+		color: white
+		font-size: 20px
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+
+.required-indicator::after
+	color: red
+	display: inline-block
+	margin-left: 5px
+
+.valid-indicator::after
+	color: green
+	display: inline-block
+	margin-left: 5px
+
+
+.error-message
+	color: red
+	font-size: 0.8em
