@@ -6,7 +6,6 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "deploy": "node ./node_modules/vue-gh-pages/index.js",
-	"wst": "/dist/",
 	"homepage": "https://github.com/Killapasha124/form"
   },
   "dependencies": {
