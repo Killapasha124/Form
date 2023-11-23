@@ -139,8 +139,10 @@
 				class="input-data"
 				type="text" 
 				id="city" 
+				placeholder="Укажите ваш город проживания"
 				v-model="client.address.city"
 				@input="validateInput('city')"
+				@blur="$v.client.address.city.$touch()"
 				:class="{ 'invalid': $v.client.address.city.$error, 'valid': !$v.client.address.city.$error && client.address.city}"
 				>
 			<span v-if="$v.client.phone.$error" class="error-message">Это обязательное поле</span>
@@ -196,6 +198,7 @@
 							placeholder="111111"
 							:class="{ 'invalid': !$v.client.passport.number.minLength, 'valid': $v.client.passport.number.minLength && client.passport.number }"
 							@input="validatePassportNumber"
+						
 							>
 						<span v-if="!$v.client.passport.number.minLength" class="error-message">Серия паспорта должна содержать 6 цифры</span>
 						
